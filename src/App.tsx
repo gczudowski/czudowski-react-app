@@ -1,17 +1,12 @@
-import Button from './components/button/Button';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import MainPage from './pages/mainPage/MainPage';
 
 function App() {
   return (
-    <div style={styles.app}>
-      <header>
-        <p>
-          This is my app
-        </p>
-        <p>
-          <Button />
-        </p>
-      </header>
-    </div>
+    <Provider store={store}>
+      <MainPage />
+    </Provider>
   );
 }
 
