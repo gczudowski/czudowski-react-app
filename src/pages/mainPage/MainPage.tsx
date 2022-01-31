@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setDarkMode } from './../../store/app/app.action';
-import Button from './../../components/button/Button';
+import { setDarkMode } from '@src/store/app/app.action';
+import Button from '@src/components/button/Button';
 
 function App() {
   const dispatch = useDispatch();
