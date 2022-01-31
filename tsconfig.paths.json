@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "@src/*": ["./*"],
+        "array-sort": ["./../node_modules/array-sort"]
+      }
+    }
+  }
