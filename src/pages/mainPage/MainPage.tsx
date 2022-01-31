@@ -1,12 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { setDarkMode } from '@src/store/app/app.action';
 import Button from '@src/components/button/Button';
 
-function App() {
+
+function MainPage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const isDarkMode = useSelector((state: any) => state.app.isDarkMode);
 
   const onClickButton = () => dispatch(setDarkMode(!isDarkMode));;
+  const goToDetailsPage = () => navigate('/details');
 
   return (
     <div style={styles.container}>
@@ -18,6 +22,9 @@ function App() {
         </p>
         <p>
             <button onClick={onClickButton}>change dark mode</button>
+        </p>
+        <p>
+            <button onClick={goToDetailsPage}>go to details page</button>
         </p>
         <p>
             <Button />
@@ -32,4 +39,4 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
 };
 
-export default App;
+export default MainPage;
